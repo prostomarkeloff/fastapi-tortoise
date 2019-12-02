@@ -333,13 +333,13 @@
 
 
 <h2 id="the-project-structure">The project structure</h2>
-<p><code>app/main.py</code> is the file which will import <code>uvicorn</code>, in this file you should call initializer functions.
-<code>app/initializer.py</code> is the file which will be called by <code>app/main.py</code> for application initializing. Out of the box it's initializing the database and API routers.
-<code>app/api/...</code> here you should define the routes. In <code>app/api/__init__.py</code> you should import routers and init <code>TypedAPIRouter</code>s for much pretty tags, dependencies and etc initialization.
-<code>app/utils/...</code> here you may create a needed for your projects utilites.
-<code>app/models/...</code> Tortoise and Pydantic models of database entities.
-<code>app/exceptions/...</code> exceptions for your API, just like <code>fastapi.HTTPException</code> but for your needs.
-<code>app/config/...</code> config for your project. You always can change it but please, try use the <code>pydantic.BaseSettings</code> - it really good thing.</p>
+<p><code>app/main.py</code> is the file which will import <code>uvicorn</code>, in this file you should call initializer functions.</p>
+<p><code>app/initializer.py</code> is the file which will be called by <code>app/main.py</code> for application initializing. Out of the box it's initializing the database and API routers.</p>
+<p><code>app/api/...</code> here you should define the routes. In <code>app/api/__init__.py</code> you should import routers and init <code>TypedAPIRouter</code>s for much pretty tags, dependencies and etc initialization.</p>
+<p><code>app/utils/...</code> here you may create a needed for your projects utilites.</p>
+<p><code>app/models/...</code> Tortoise and Pydantic models of database entities.</p>
+<p><code>app/exceptions/...</code> exceptions for your API, just like <code>fastapi.HTTPException</code> but for your needs.</p>
+<p><code>app/config/...</code> config for your project. You always can change it but please, try use the <code>pydantic.BaseSettings</code> - it really good thing.</p>
 <p>TBD</p>
                 
                   
