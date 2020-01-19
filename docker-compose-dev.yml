@@ -1,0 +1,26 @@
+version: '3'
+services:
+  api:
+    build: .
+    environment:
+      PORT: 8000
+      APP_MODULE: "app.main:app"
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    restart: always
+    depends_on:
+      - postgres
+    command: ["/start-reload.sh"]  # auto reload for development
+    volumes:
+      - ./app:/app/app
+
+  postgres:
+    image: "postgres:12"
+    ports:
+      - "5432:5432"
+    env_file: .env
+    volumes:
+      - "./postgres-data:/var/lib/postgresql/data"
+    restart: always

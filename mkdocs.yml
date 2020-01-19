@@ -1,0 +1,11 @@
+site_name: FastAPI Tortoise
+nav:
+  - Get started: index.md
+theme:
+  name: 'material'
+markdown_extensions:
+  - admonition
+  - codehilite
+
+repo_name: 'prostomarkeloff/fastapi-tortoise'
+repo_url: 'https://github.com/prostomarkeloff/fastapi-tortoise'
