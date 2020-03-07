@@ -12,9 +12,9 @@ SQLITE_DB_URL = "sqlite://:memory:"
 class PostgresSettings(BaseSettings):
     """Postgres env values"""
 
-    postgres_user: str = Field("postgres", env="POSGTRES_USER")
-    postgres_password: str = Field("postgres", env="POSGTRES_PASSWORD")
-    postgres_db: str = Field("mydb", env="POSGTRES_DB")
+    postgres_user: str = Field("postgres", env="POSTGRES_USER")
+    postgres_password: str = Field("postgres", env="POSTGRES_PASSWORD")
+    postgres_db: str = Field("mydb", env="POSTGRES_DB")
     postgres_port: str = Field("5432", env="POSTGRES_PORT")
     postgres_host: str = Field("postgres", env="POSTGRES_HOST")
 
