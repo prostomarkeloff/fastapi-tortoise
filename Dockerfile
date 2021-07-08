@@ -2,7 +2,7 @@ FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
 
 
 RUN pip install poetry
-RUN poetry config settings.virtualenvs.create false
+RUN poetry config virtualenvs.create false
 COPY poetry.lock pyproject.toml ./
 
 # for poetry
