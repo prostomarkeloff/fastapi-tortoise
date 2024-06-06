@@ -1,3 +1,7 @@
+# Deprecated
+
+This template is deprecated and won't run out-of-the-box. It's needed to be a bit reworked, but now I don't have enough time and passion to do this.
+
 # FastAPI and Tortoise ORM.
 Powerful but simple template for web APIs w/ FastAPI (as web framework) and Tortoise-ORM (for working via database without headache).
 
