@@ -3,7 +3,7 @@ import typing
 from fastapi import APIRouter
 from fastapi.params import Depends
 from pydantic import BaseModel
-from starlette.responses import Response
+from starlette.responses import Response, JSONResponse
 
 
 class TypedAPIRouter(BaseModel):
@@ -16,7 +16,7 @@ class TypedAPIRouter(BaseModel):
     responses: typing.Dict[
         typing.Union[int, str], typing.Dict[str, typing.Any]
     ] = dict()
-    default_response_class: typing.Optional[typing.Type[Response]] = None
+    default_response_class: typing.Optional[typing.Type[Response]] = JSONResponse
 
     class Config:
         arbitrary_types_allowed = True

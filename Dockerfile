@@ -1,16 +1,17 @@
-FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
+FROM python:3.9 as requirements-stage
 
+WORKDIR /tmp
 
 RUN pip install poetry
-RUN poetry config settings.virtualenvs.create false
-COPY poetry.lock pyproject.toml ./
 
-# for poetry
-RUN mkdir -p /app/app/
-RUN touch /app/app/__init__.py
+COPY ./pyproject.toml ./poetry.lock* /tmp/
 
+RUN poetry export -f requirements.txt --output requirements.txt --without-hashes
 
-RUN poetry install -n
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.11
 
+COPY --from=requirements-stage /tmp/requirements.txt /app/requirements.txt
 
-COPY ./app /app/app
+RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
+
+COPY ./app /app

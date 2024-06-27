@@ -1,4 +1,4 @@
-from app.core.routers.hello import router as hello_router
+from app.core.routers.items import router as items_router
 from app.utils.api.router import TypedAPIRouter
 
-hello_router = TypedAPIRouter(router=hello_router, prefix="/hello", tags=["hello"])
+items_router = TypedAPIRouter(router=items_router, prefix="/items", tags=["item"])

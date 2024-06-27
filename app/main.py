@@ -4,6 +4,9 @@ will run your application with this file.
 """
 from fastapi import FastAPI
 from loguru import logger
+import logging
+
+logging.basicConfig(level="DEBUG")
 
 from app.config import openapi_config
 from app.initializer import init

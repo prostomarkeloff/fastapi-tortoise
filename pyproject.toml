@@ -10,19 +10,19 @@ packages = [
 
 
 [tool.poetry.dependencies]
-python = "^3.7"
-fastapi = "^0.44.0"
-tortoise-orm = "^0.15.4"
-pydantic = "^1.1"
-asyncpg = "^0.20.0"
-loguru = "^0.3.2"
+python = "^3.9"
+fastapi = "^0.111.0"
+tortoise-orm = "^0.21.3"
+pydantic = "^2.7.4"
+asyncpg = "^0.29.0"
+loguru = "^0.7.2"
+betterconf = "^2.8.0"
 
 [tool.poetry.dev-dependencies]
 black = {version = "^18.3-alpha.0", allows-prereleases = true}
 pytest = "^5.3"
 pytest-asyncio = "^0.10.0"
 pre-commit = "^1.20"
-uvicorn = "^0.10.8"
 pytest-cov = "^2.8"
 mkdocs = "^1.0"
 mkdocs-material = "^4.5"

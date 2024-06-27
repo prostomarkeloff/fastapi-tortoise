@@ -1,15 +1,15 @@
 # FastAPI Tortoise
 
-Here I was tried to describe how to use it and that ideas I followed when was creating it.
+Here I tried to describe how to use this template and what ideas I followed when was creating it.
 
 ## Main ideas
 
     * All typed.
-    I very like modern Python. Python with type-hints. It let to you write a code that will be understood by everybody.
+    I very like modern Python. Python with type-hints. It let you write code that will be understood by everybody.
     * All tested.
     I'm a big fan of TDD ideas. I have tried to test all components in this project.
     * Respects to OpenAPI ideas.
-    OpenAPI schema is great thing, really. When I was creating it I was hoping that you will use the OpenAPI capatibilites which FastAPI provides to you fully.
+    OpenAPI schema is a great thing, really. When I was creating it I was hoping that you will use the OpenAPI capatibilites which FastAPI provides to you fully.
     * Easy to deploy.
     No comments.
 
@@ -27,6 +27,4 @@ Here I was tried to describe how to use it and that ideas I followed when was cr
 
 `app/exceptions/...` exceptions for your API, just like `fastapi.HTTPException` but for your needs.
 
-`app/config/...` config for your project. You always can change it but please, try use the `pydantic.BaseSettings` - it really good thing.
-
-TBD
+`app/config/...` config for your project. You always can change it but please, try to use [betterconf](https://github.com/prostomarkeloff/betterconf) - it is really a good thing.

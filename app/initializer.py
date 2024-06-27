@@ -14,6 +14,15 @@ def init(app: FastAPI):
     """
     init_routers(app)
     init_db(app)
+    init_exceptions_handlers(app)
+
+
+def init_exceptions_handlers(app: FastAPI):
+    from app.core.exceptions.handlers import tortoise_exception_handler
+    from app.core.exceptions.handlers import BaseORMException
+
+    app.add_exception_handler(BaseORMException, tortoise_exception_handler)
+
 
 
 def init_db(app: FastAPI):
